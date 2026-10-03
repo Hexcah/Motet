@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "CCC",
     "CSC",
-    "CCC"
+    "SBS",
+    "CSC"
   ],
   "key": {
     "C": {
@@ -12,6 +12,9 @@
     },
     "S": {
       "item": "totemic:stripped_cedar_log"
+    },
+    "B": {
+      "item": "totemic:buffalo_hide"
     }
   },
   "result": {

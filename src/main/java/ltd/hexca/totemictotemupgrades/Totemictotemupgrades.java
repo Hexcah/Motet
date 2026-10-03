@@ -39,7 +39,7 @@ public class Totemictotemupgrades {
     }
 
     private static void addCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.MISC) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TOTEM_UPGRADE_1_ITEM.get());
         }
     }
