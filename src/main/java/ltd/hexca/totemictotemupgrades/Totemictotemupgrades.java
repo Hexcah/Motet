@@ -5,15 +5,16 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 
 @Mod(Totemictotemupgrades.MODID)
 public class Totemictotemupgrades {
     public static final String MODID = "totemictotemupgrades";
-    public static final int TOTEM_BASE_RANGE = 8;
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public Totemictotemupgrades(IEventBus modEventBus, ModContainer modContainer) {
+        modContainer.registerConfig(ModConfig.Type.COMMON, TotemictotemupgradesConfig.SPEC);
     }
 }
