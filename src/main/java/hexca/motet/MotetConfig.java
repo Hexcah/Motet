@@ -1,8 +1,8 @@
-package ltd.hexca.totemictotemupgrades;
+package hexca.motet;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-public final class TotemictotemupgradesConfig {
+public final class MotetConfig {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.IntValue TOTEM_BASE_RANGE;
 
@@ -16,6 +16,6 @@ public final class TotemictotemupgradesConfig {
         SPEC = builder.build();
     }
 
-    private TotemictotemupgradesConfig() {
+    private MotetConfig() {
     }
 }

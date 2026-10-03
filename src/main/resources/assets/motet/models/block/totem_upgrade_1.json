@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "totemictotemupgrades:block/totem_upgrade_1"
+    "all": "motet:block/totem_upgrade_1"
   }
 }

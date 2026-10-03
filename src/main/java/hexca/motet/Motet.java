@@ -1,4 +1,4 @@
-package ltd.hexca.totemictotemupgrades;
+package hexca.motet;
 
 import org.slf4j.Logger;
 
@@ -20,9 +20,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Supplier;
 
-@Mod(Totemictotemupgrades.MODID)
-public class Totemictotemupgrades {
-    public static final String MODID = "totemictotemupgrades";
+@Mod(Motet.MODID)
+public class Motet {
+    public static final String MODID = "motet";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, MODID);
@@ -31,11 +31,11 @@ public class Totemictotemupgrades {
     public static final Supplier<Item> TOTEM_UPGRADE_1_ITEM = ITEMS.register("totem_upgrade_1",
             () -> new BlockItem(TOTEM_UPGRADE_1.get(), new Item.Properties()));
 
-    public Totemictotemupgrades(IEventBus modEventBus, ModContainer modContainer) {
+    public Motet(IEventBus modEventBus, ModContainer modContainer) {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
-        modEventBus.addListener(Totemictotemupgrades::addCreativeTabContents);
-        modContainer.registerConfig(ModConfig.Type.COMMON, TotemictotemupgradesConfig.SPEC);
+        modEventBus.addListener(Motet::addCreativeTabContents);
+        modContainer.registerConfig(ModConfig.Type.COMMON, MotetConfig.SPEC);
     }
 
     private static void addCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
