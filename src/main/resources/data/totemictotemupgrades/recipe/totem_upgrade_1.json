@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "CSC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "totemic:cedar_log"
+    },
+    "S": {
+      "item": "totemic:stripped_cedar_log"
+    }
+  },
+  "result": {
+    "id": "totemictotemupgrades:totem_upgrade_1",
+    "count": 1
+  }
+}
