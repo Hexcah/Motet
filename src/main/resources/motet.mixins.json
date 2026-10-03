@@ -4,7 +4,8 @@
   "package": "hexca.motet.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "TotemEffectApiImplMixin"
+    "TotemEffectApiImplMixin",
+    "TotemBaseBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
