@@ -16,11 +16,11 @@ displayName="${mod_name}" #mandatory
 authors="Hexca"
 
 description='''
-Add upgrade to Totemic totem
+Adds totem upgrades to Totemic
 '''
 
-#[[mixins]]
-#config="${mod_id}.mixins.json"
+[[mixins]]
+config="${mod_id}.mixins.json"
 
 #[[accessTransformers]]
 #file="META-INF/accesstransformer.cfg"
@@ -37,4 +37,11 @@ Add upgrade to Totemic totem
     type="required"
     versionRange="${minecraft_version_range}"
     ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="totemic"
+    type="required"
+    versionRange="[0.12.19,)"
+    ordering="AFTER"
     side="BOTH"
