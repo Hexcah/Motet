@@ -33,7 +33,7 @@ public final class MotetTotems {
             Class<?> potionEffectClass = Class.forName("pokefenn.totemic.api.totem.PotionTotemEffect");
             Object potionEffect = potionEffectClass
                     .getConstructor(Holder.class, boolean.class)
-                    .newInstance(effect, false);
+                    .newInstance(effect, true);
             Class<?> carvingClass = Class.forName("pokefenn.totemic.api.totem.TotemCarving");
             return carvingClass.getMethod("of", totemEffectClass).invoke(null, potionEffect);
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException
