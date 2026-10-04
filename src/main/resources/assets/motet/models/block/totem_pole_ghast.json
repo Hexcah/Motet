@@ -3,9 +3,9 @@
 	"parent": "block/block",
 	"elements": [
 		{
-			"from": [7, 0, 11],
-			"to": [9, 6, 13],
-			"rotation": {"angle": 0, "axis": "x", "origin": [3, -3, 10]},
+			"from": [7, 0, 14],
+			"to": [9, 6, 16],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [3, -3, 13]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -16,9 +16,9 @@
 			}
 		},
 		{
-			"from": [11, 0, 11],
-			"to": [13, 6, 13],
-			"rotation": {"angle": 0, "axis": "x", "origin": [7, -3, 10]},
+			"from": [11, 0, 14],
+			"to": [13, 6, 16],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7, -3, 13]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -29,9 +29,9 @@
 			}
 		},
 		{
-			"from": [11, 0, 7],
-			"to": [13, 6, 9],
-			"rotation": {"angle": 0, "axis": "x", "origin": [7, -3, 6]},
+			"from": [11, 0, 10],
+			"to": [13, 6, 12],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7, -3, 9]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -42,9 +42,9 @@
 			}
 		},
 		{
-			"from": [7, 0, 7],
-			"to": [9, 6, 9],
-			"rotation": {"angle": 0, "axis": "x", "origin": [3, -3, 6]},
+			"from": [7, 0, 10],
+			"to": [9, 6, 12],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [3, -3, 9]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -55,9 +55,9 @@
 			}
 		},
 		{
-			"from": [11, 0, 3],
-			"to": [13, 6, 5],
-			"rotation": {"angle": 0, "axis": "x", "origin": [7, -3, 2]},
+			"from": [11, 0, 6],
+			"to": [13, 6, 8],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7, -3, 5]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -68,9 +68,9 @@
 			}
 		},
 		{
-			"from": [3, 0, 11],
-			"to": [5, 6, 13],
-			"rotation": {"angle": 0, "axis": "x", "origin": [-1, -3, 10]},
+			"from": [3, 0, 14],
+			"to": [5, 6, 16],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [-1, -3, 13]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -81,9 +81,9 @@
 			}
 		},
 		{
-			"from": [3, 0, 7],
-			"to": [5, 6, 9],
-			"rotation": {"angle": 0, "axis": "x", "origin": [-1, -3, 6]},
+			"from": [3, 0, 10],
+			"to": [5, 6, 12],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [-1, -3, 9]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -94,9 +94,9 @@
 			}
 		},
 		{
-			"from": [3, 0, 3],
-			"to": [5, 6, 5],
-			"rotation": {"angle": 0, "axis": "x", "origin": [-1, -3, 2]},
+			"from": [3, 0, 6],
+			"to": [5, 6, 8],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [-1, -3, 5]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -107,9 +107,9 @@
 			}
 		},
 		{
-			"from": [7, 0, 3],
-			"to": [9, 6, 5],
-			"rotation": {"angle": 0, "axis": "x", "origin": [3, -3, 2]},
+			"from": [7, 0, 6],
+			"to": [9, 6, 8],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [3, -3, 5]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
@@ -120,8 +120,8 @@
 			}
 		},
 		{
-			"from": [2, 6, 3],
-			"to": [14, 17, 14],
+			"from": [2, 5, 3],
+			"to": [14, 16, 14],
 			"faces": {
 				"north": {"texture": "#wood", "tintindex": 5592405},
 				"east": {"texture": "#wood"},
@@ -132,8 +132,8 @@
 			}
 		},
 		{
-			"from": [2, 13, 2],
-			"to": [14, 17, 3],
+			"from": [2, 12, 2],
+			"to": [14, 16, 3],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -1]},
 			"faces": {
 				"north": {"texture": "#wood"},
@@ -144,8 +144,8 @@
 			}
 		},
 		{
-			"from": [2, 6, 2],
-			"to": [14, 12, 3],
+			"from": [2, 5, 2],
+			"to": [14, 11, 3],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -1]},
 			"faces": {
 				"north": {"texture": "#wood"},
@@ -156,41 +156,40 @@
 			}
 		},
 		{
-			"from": [2, 12, 2],
-			"to": [5, 13, 3],
-			"rotation": {"angle": 0, "axis": "y", "origin": [-4, 1, -1]},
+			"from": [2, 11, 2],
+			"to": [5, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-4, 0, -1]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
 				"west": {"texture": "#wood"},
-                "up": {"texture": "#top"},
+				"up": {"texture": "#top"},
 				"down": {"texture": "#top"}
 			}
 		},
 		{
-			"from": [7, 12, 2],
-			"to": [9, 13, 3],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, -1]},
+			"from": [7, 11, 2],
+			"to": [9, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -1]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
 				"west": {"texture": "#wood"},
-                "up": {"texture": "#top"},
+				"up": {"texture": "#top"},
 				"down": {"texture": "#top"}
 			}
 		},
 		{
-			"from": [11, 12, 2],
-			"to": [14, 13, 3],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, -1]},
+			"from": [11, 11, 2],
+			"to": [14, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, -1]},
 			"faces": {
 				"north": {"texture": "#wood"},
 				"east": {"texture": "#wood"},
 				"west": {"texture": "#wood"},
-                "up": {"texture": "#top"},
+				"up": {"texture": "#top"},
 				"down": {"texture": "#top"}
 			}
 		}
 	]
 }
-
