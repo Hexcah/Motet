@@ -34,6 +34,7 @@ public class Motet {
     public Motet(IEventBus modEventBus, ModContainer modContainer) {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+        modEventBus.addListener(MotetTotems::register);
         modEventBus.addListener(Motet::addCreativeTabContents);
         modContainer.registerConfig(ModConfig.Type.COMMON, MotetConfig.SPEC);
     }
