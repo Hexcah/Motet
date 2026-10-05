@@ -2,14 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SAS",
-    "SLS",
-    "SUS"
+    "UAU",
+    "ULU",
+    "USU"
   ],
   "key": {
-    "O": {
-      "item": "minecraft:mangrove_log"
-    },
     "S": {
       "item": "minecraft:stripped_mangrove_log"
     },

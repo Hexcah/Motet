@@ -2,14 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SAS",
-    "SLS",
-    "SUS"
+    "UAU",
+    "ULU",
+    "USU"
   ],
   "key": {
-    "O": {
-      "item": "minecraft:dark_oak_log"
-    },
     "S": {
       "item": "minecraft:stripped_dark_oak_log"
     },
