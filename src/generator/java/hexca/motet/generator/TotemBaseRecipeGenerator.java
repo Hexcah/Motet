@@ -68,10 +68,8 @@ public final class TotemBaseRecipeGenerator {
     }
 
     private static void requireMarkers(String template) {
-        for (String marker : List.of("__WOOD_TYPE__", "__LOG_ITEM__", "__STRIPPED_LOG_ITEM__")) {
-            if (!template.contains(marker)) {
-                throw new IllegalArgumentException("Recipe template is missing marker: " + marker);
-            }
+        if (!template.contains("__WOOD_TYPE__")) {
+            throw new IllegalArgumentException("Recipe template is missing marker: __WOOD_TYPE__");
         }
     }
 
