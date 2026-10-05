@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SFS",
-    "BDB",
-    "SFS"
+    "THT",
+    "DTD",
+    "SSS"
   ],
   "key": {
-    "B": {
-      "item": "totemic:eagle_bone"
+    "T": {
+      "item": "totemic:buffalo_tooth"
     },
     "S": {
       "item": "totemic:stripped_cedar_log"
     },
-    "I": {
-      "item": "minecraft:diamond_block"
+    "D": {
+      "item": "minecraft:diamond"
     },
-    "F": {
-      "item": "totemic:eagle_feather"
+    "H": {
+      "item": "totemic:buffalo_hide"
     }
   },
   "result": {
