@@ -1,0 +1,22 @@
+{
+  "recipes": [
+    "data/motet/recipe/oak_horse_totem.json",
+    "data/motet/recipe/spruce_horse_totem.json",
+    "data/motet/recipe/birch_horse_totem.json",
+    "data/motet/recipe/jungle_horse_totem.json",
+    "data/motet/recipe/acacia_horse_totem.json",
+    "data/motet/recipe/cherry_horse_totem.json",
+    "data/motet/recipe/dark_oak_horse_totem.json",
+    "data/motet/recipe/mangrove_horse_totem.json",
+    "data/motet/recipe/cedar_horse_totem.json",
+    "data/motet/recipe/oak_totem_base.json",
+    "data/motet/recipe/spruce_totem_base.json",
+    "data/motet/recipe/birch_totem_base.json",
+    "data/motet/recipe/jungle_totem_base.json",
+    "data/motet/recipe/acacia_totem_base.json",
+    "data/motet/recipe/cherry_totem_base.json",
+    "data/motet/recipe/dark_oak_totem_base.json",
+    "data/motet/recipe/mangrove_totem_base.json",
+    "data/motet/recipe/cedar_totem_base.json"
+  ]
+}

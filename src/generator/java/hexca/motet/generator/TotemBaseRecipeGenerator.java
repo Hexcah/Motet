@@ -23,13 +23,15 @@ public final class TotemBaseRecipeGenerator {
     }
 
     public static void main(String[] args) throws IOException {
-        if (args.length != 2) {
-            throw new IllegalArgumentException("Expected: <template directory> <output directory>");
+        if (args.length != 3) {
+            throw new IllegalArgumentException("Expected: <template directory> <output directory> <JEI manifest path>");
         }
 
         Path templateDirectory = Path.of(args[0]);
         Path outputDirectory = Path.of(args[1]);
+        Path jeiManifestPath = Path.of(args[2]);
         Files.createDirectories(outputDirectory);
+        List<String> generatedRecipes = new java.util.ArrayList<>();
 
         try (Stream<Path> templatePaths = Files.list(templateDirectory)) {
             List<Path> templates = templatePaths
@@ -51,10 +53,18 @@ public final class TotemBaseRecipeGenerator {
                             .replace("__WOOD_TYPE__", woodType.registryName())
                             .replace("__LOG_ITEM__", woodType.logItem())
                             .replace("__STRIPPED_LOG_ITEM__", woodType.strippedLogItem());
-                    Files.writeString(outputDirectory.resolve(woodType.name() + "_" + recipeName + ".json"), recipe);
+                    String outputName = woodType.name() + "_" + recipeName + ".json";
+                    Files.writeString(outputDirectory.resolve(outputName), recipe);
+                    generatedRecipes.add("data/motet/recipe/" + outputName);
                 }
             }
         }
+
+        Files.createDirectories(jeiManifestPath.getParent());
+        String manifestRecipes = String.join(",\n", generatedRecipes.stream()
+                .map(path -> "    \"" + path + "\"")
+                .toList());
+        Files.writeString(jeiManifestPath, "{\n  \"recipes\": [\n" + manifestRecipes + "\n  ]\n}\n");
     }
 
     private static void requireMarkers(String template) {
