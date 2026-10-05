@@ -2,14 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SAS",
-    "SLS",
-    "SUS"
+    "UAU",
+    "ULU",
+    "USU"
   ],
   "key": {
-    "O": {
-      "item": "__LOG_ITEM__"
-    },
     "S": {
       "item": "__STRIPPED_LOG_ITEM__"
     },
