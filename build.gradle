@@ -95,7 +95,7 @@ tasks.register("generateTotemBaseRecipes", JavaExec) {
     mainClass = "hexca.motet.generator.TotemBaseRecipeGenerator"
     args(
             file("scripts/totem_base_recipe.template.json").absolutePath,
-            file("src/main/resources/data/motet/recipe").absolutePath
+            file("src/generated/resources/data/motet/recipe").absolutePath
     )
 }
 
