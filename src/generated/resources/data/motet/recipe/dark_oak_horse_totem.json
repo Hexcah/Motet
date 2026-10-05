@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SAS",
+    "SLS",
+    "SUS"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:dark_oak_log"
+    },
+    "S": {
+      "item": "minecraft:stripped_dark_oak_log"
+    },
+    "U": {
+      "item": "minecraft:sugar"
+    },
+    "L": {
+      "item": "minecraft:leather_horse_armor"
+    },
+    "A": {
+      "item": "minecraft:saddle"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:dark_oak",
+      "totemic:carving": "totemic:horse"
+    }
+  }
+}
