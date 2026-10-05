@@ -1,18 +1,18 @@
 package hexca.motet;
 
 public final class TotemUpgradeState {
-    private static final ThreadLocal<Boolean> RANGE_UPGRADE_ACTIVE = ThreadLocal.withInitial(() -> false);
+    private static final ThreadLocal<Integer> RANGE_UPGRADE = ThreadLocal.withInitial(() -> 0);
 
     private TotemUpgradeState() {
     }
 
-    public static void setRangeUpgradeActive(boolean active) {
-        RANGE_UPGRADE_ACTIVE.set(active);
+    public static void setRangeUpgrade(int range) {
+        RANGE_UPGRADE.set(range);
     }
 
-    public static boolean consumeRangeUpgrade() {
-        boolean active = RANGE_UPGRADE_ACTIVE.get();
-        RANGE_UPGRADE_ACTIVE.set(false);
-        return active;
+    public static int consumeRangeUpgrade() {
+        int range = RANGE_UPGRADE.get();
+        RANGE_UPGRADE.set(0);
+        return range;
     }
 }

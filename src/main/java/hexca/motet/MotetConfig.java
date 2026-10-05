@@ -6,6 +6,7 @@ public final class MotetConfig {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.IntValue TOTEM_BASE_RANGE;
     public static final ModConfigSpec.IntValue TOTEM_UPGRADE_1_RANGE;
+    public static final ModConfigSpec.IntValue TOTEM_UPGRADE_2_RANGE;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -17,6 +18,10 @@ public final class MotetConfig {
         TOTEM_UPGRADE_1_RANGE = builder
                 .comment("Additional range provided by totem_upgrade_1")
                 .defineInRange("TOTEM_UPGRADE_1_RANGE", 3, 0, Integer.MAX_VALUE);
+
+        TOTEM_UPGRADE_2_RANGE = builder
+                .comment("Additional range provided by totem_upgrade_2")
+                .defineInRange("TOTEM_UPGRADE_2_RANGE", 6, 0, Integer.MAX_VALUE);
 
         SPEC = builder.build();
     }

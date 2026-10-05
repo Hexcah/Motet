@@ -30,6 +30,10 @@ public class Motet {
             () -> new Block(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Item> TOTEM_UPGRADE_1_ITEM = ITEMS.register("totem_upgrade_1",
             () -> new BlockItem(TOTEM_UPGRADE_1.get(), new Item.Properties()));
+    public static final Supplier<Block> TOTEM_UPGRADE_2 = BLOCKS.register("totem_upgrade_2",
+            () -> new Block(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final Supplier<Item> TOTEM_UPGRADE_2_ITEM = ITEMS.register("totem_upgrade_2",
+            () -> new BlockItem(TOTEM_UPGRADE_2.get(), new Item.Properties()));
 
     public Motet(IEventBus modEventBus, ModContainer modContainer) {
         BLOCKS.register(modEventBus);
@@ -42,6 +46,7 @@ public class Motet {
     private static void addCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(TOTEM_UPGRADE_1_ITEM.get());
+            event.accept(TOTEM_UPGRADE_2_ITEM.get());
         }
     }
 }

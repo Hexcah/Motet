@@ -13,9 +13,7 @@ public abstract class TotemEffectApiImplMixin {
     @Inject(method = "getDefaultRange", at = @At("RETURN"), cancellable = true)
     private void motet$modifyBaseRange(CallbackInfoReturnable<Integer> cir) {
         int range = cir.getReturnValueI() + MotetConfig.TOTEM_BASE_RANGE.get() - 5;
-        if (TotemUpgradeState.consumeRangeUpgrade()) {
-            range += MotetConfig.TOTEM_UPGRADE_1_RANGE.get();
-        }
+        range += TotemUpgradeState.consumeRangeUpgrade();
         cir.setReturnValue(range);
     }
 }

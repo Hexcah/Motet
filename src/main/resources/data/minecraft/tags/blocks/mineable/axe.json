@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "motet:totem_upgrade_1"
+    "motet:totem_upgrade_1",
+    "motet:totem_upgrade_2"
   ]
 }

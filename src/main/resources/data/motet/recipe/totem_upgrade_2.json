@@ -7,21 +7,21 @@
     "SFS"
   ],
   "key": {
-    "B": {
-      "item": "totemic:eagle_bone"
+    "T": {
+      "item": "totemic:buffalo_tooth"
     },
     "S": {
       "item": "totemic:stripped_cedar_log"
     },
-    "I": {
+    "D": {
       "item": "minecraft:diamond_block"
     },
     "F": {
-      "item": "totemic:eagle_feather"
+    "item": "totemic:buffalo_hide"
     }
   },
   "result": {
-    "id": "motet:totem_upgrade_1",
+    "id": "motet:totem_upgrade_2",
     "count": 1
   }
 }
