@@ -4,11 +4,15 @@
   "pattern": [
     "UAU",
     "ULU",
-    "USU"
+    "UPU"
   ],
   "key": {
-    "S": {
-      "item": "totemic:stripped_cedar_log"
+    "P": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:cedar"
+      }
     },
     "U": {
       "item": "minecraft:sugar"
