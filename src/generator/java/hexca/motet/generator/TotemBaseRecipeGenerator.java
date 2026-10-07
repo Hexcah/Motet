@@ -24,7 +24,7 @@ public final class TotemBaseRecipeGenerator {
 
     public static void main(String[] args) throws IOException {
         if (args.length != 3) {
-            throw new IllegalArgumentException("Expected: <template directory> <output directory> <JEI manifest path>");
+            throw new IllegalArgumentException("Expected: <template directory> <recipe output directory> <JEI manifest path>");
         }
 
         Path templateDirectory = Path.of(args[0]);
