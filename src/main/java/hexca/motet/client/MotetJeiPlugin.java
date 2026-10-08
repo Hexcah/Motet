@@ -5,16 +5,19 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.ingredients.subtypes.ISubtypeInterpreter;
 import mezz.jei.api.ingredients.subtypes.UidContext;
 import mezz.jei.api.registration.IExtraIngredientRegistration;
 import mezz.jei.api.registration.ISubtypeRegistration;
+import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +32,8 @@ import java.util.Set;
 public final class MotetJeiPlugin implements IModPlugin {
     private static final ResourceLocation PLUGIN_ID =
             ResourceLocation.fromNamespaceAndPath("motet", "jei_plugin");
+    private static final ResourceLocation TOTEM_WHITTLING_KNIFE =
+            ResourceLocation.fromNamespaceAndPath("totemic", "totem_whittling_knife");
     private static final String JEI_MANIFEST = "/data/motet/jei/totem_recipes.json";
 
     @Override
@@ -59,6 +64,17 @@ public final class MotetJeiPlugin implements IModPlugin {
     @Override
     public void registerExtraIngredients(IExtraIngredientRegistration registration) {
         registration.addExtraItemStacks(loadGeneratedRecipeOutputs());
+    }
+
+    @Override
+    public void onRuntimeAvailable(IJeiRuntime jeiRuntime) {
+        Item knife = BuiltInRegistries.ITEM.get(TOTEM_WHITTLING_KNIFE);
+        if (knife == Items.AIR) {
+            throw new IllegalStateException("Totemic item is unavailable: " + TOTEM_WHITTLING_KNIFE);
+        }
+
+        jeiRuntime.getIngredientManager().removeIngredientsAtRuntime(
+                VanillaTypes.ITEM_STACK, List.of(new ItemStack(knife)));
     }
 
     private static List<ItemStack> loadGeneratedRecipeOutputs() {
