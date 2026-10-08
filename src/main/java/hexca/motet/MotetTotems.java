@@ -20,7 +20,7 @@ public final class MotetTotems {
 
     public static void register(RegisterEvent event) {
         event.register(TOTEM_CARVING_REGISTRY, helper -> {
-            registerPotionTotem(helper, "turtle", MobEffects.ABSORPTION);
+            registerPotionTotem(helper, "turtle", MobEffects.MOVEMENT_SLOWDOWN, MobEffects.DAMAGE_RESISTANCE);
             registerPotionTotem(helper, "ghast", ModEffects.FLIGHT_EFFECT);
         });
     }
@@ -55,19 +55,23 @@ public final class MotetTotems {
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})
-    private static void registerPotionTotem(RegisterEvent.RegisterHelper helper, String name, Holder<?> effect) {
-        helper.register(ResourceLocation.fromNamespaceAndPath(Motet.MODID, name), createPotionCarving(effect));
+    private static void registerPotionTotem(
+            RegisterEvent.RegisterHelper helper, String name, Holder<?>... effects) {
+        helper.register(ResourceLocation.fromNamespaceAndPath(Motet.MODID, name), createPotionCarving(effects));
     }
 
-    private static Object createPotionCarving(Holder<?> effect) {
+    private static Object createPotionCarving(Holder<?>... effects) {
         try {
             Class<?> totemEffectClass = Class.forName("pokefenn.totemic.api.totem.TotemEffect");
             Class<?> potionEffectClass = Class.forName("pokefenn.totemic.api.totem.PotionTotemEffect");
-            Object potionEffect = potionEffectClass
-                    .getConstructor(Holder.class, boolean.class)
-                    .newInstance(effect, true);
+            List<Object> potionEffects = new java.util.ArrayList<>(effects.length);
+            for (Holder<?> effect : effects) {
+                potionEffects.add(potionEffectClass
+                        .getConstructor(Holder.class, boolean.class)
+                        .newInstance(effect, true));
+            }
             Class<?> carvingClass = Class.forName("pokefenn.totemic.api.totem.TotemCarving");
-            return carvingClass.getMethod("of", totemEffectClass).invoke(null, potionEffect);
+            return carvingClass.getMethod("of", List.class).invoke(null, potionEffects);
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException
                  | IllegalAccessException | InvocationTargetException exception) {
             throw new IllegalStateException("Totemic's carving API is unavailable", exception);
