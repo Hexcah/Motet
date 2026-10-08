@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SPS",
+    "STS"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:oak"
+      }
+    },
+    "S": {
+      "item": "minecraft:turtle_scute"
+    },
+    "P": {
+      "type": "neoforge:components",
+      "items": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": "minecraft:turtle_master"
+      },
+    "strict": false
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:oak",
+      "totemic:carving": "motet:turtle"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "HFH",
+    "HPH",
+    "HTH"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:dark_oak"
+      }
+    },
+    "F": {
+      "item": "minecraft:rabbit_foot"
+    },
+    "H": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "P": {
+      "type": "neoforge:components",
+      "items": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": "minecraft:leaping"
+      },
+    "strict": false
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:dark_oak",
+      "totemic:carving": "totemic:rabbit"
+    }
+  }
+}

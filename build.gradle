@@ -18,7 +18,16 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache")
 }
 
+sourceSets {
+    generator {
+        java.srcDir('src/generator/java')
+    }
+}
+
 repositories {
+    maven {
+        url = uri("https://maven.blamejared.com")
+    }
 }
 
 base {
@@ -71,11 +80,23 @@ neoForge {
     }
 }
 
-configurations {
-    runtimeClasspath.extendsFrom localRuntime
+dependencies {
+    compileOnly "mezz.jei:jei-1.21.1-neoforge-api:${jei_version}"
 }
 
-dependencies {
+tasks.register("generateTotemBaseRecipes", JavaExec) {
+    dependsOn(tasks.named("compileGeneratorJava"))
+    classpath = sourceSets.generator.runtimeClasspath
+    mainClass = "hexca.motet.generator.TotemBaseRecipeGenerator"
+    args(
+            file("scripts").absolutePath,
+            file("src/generated/resources/data/motet/recipe").absolutePath,
+            file("src/generated/resources/data/motet/jei/totem_recipes.json").absolutePath
+    )
+}
+
+tasks.named("processResources").configure {
+    dependsOn(tasks.named("generateTotemBaseRecipes"))
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

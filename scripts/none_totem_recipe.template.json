@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "__STRIPPED_LOG_ITEM__"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "__WOOD_TYPE__"
+    }
+  }
+}

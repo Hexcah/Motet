@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BHB",
+    "BHB",
+    "BTB"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "__WOOD_TYPE__"
+      }
+    },
+    "B": {
+      "item": "totemic:buffalo_tooth"
+    },
+    "H": {
+      "item": "totemic:buffalo_hide"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "__WOOD_TYPE__",
+      "totemic:carving": "totemic:buffalo"
+    }
+  }
+}

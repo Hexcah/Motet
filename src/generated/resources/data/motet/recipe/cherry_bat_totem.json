@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FMF",
+    "FPF",
+    "FTF"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:cherry"
+      }
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "M": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "P": {
+      "type": "neoforge:components",
+      "items": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": "minecraft:slow_falling"
+      },
+    "strict": false
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:cherry",
+      "totemic:carving": "totemic:bat"
+    }
+  }
+}

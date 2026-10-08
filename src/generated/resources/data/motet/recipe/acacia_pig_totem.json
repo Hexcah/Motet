@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "CSC",
+    "CTC"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:acacia"
+      }
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "R": {
+      "item": "minecraft:porkchop"
+    },
+    "S": {
+      "item": "minecraft:carrot_on_a_stick"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:acacia",
+      "totemic:carving": "totemic:pig"
+    }
+  }
+}

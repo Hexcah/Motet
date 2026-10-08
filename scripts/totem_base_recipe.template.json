@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    " S ",
+    "OOO"
+  ],
+  "key": {
+    "O": {
+      "item": "__LOG_ITEM__"
+    },
+    "S": {
+      "item": "__STRIPPED_LOG_ITEM__"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_base",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "__WOOD_TYPE__"
+    }
+  }
+}

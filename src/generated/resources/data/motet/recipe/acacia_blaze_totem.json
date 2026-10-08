@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BRB",
+    "BPB",
+    "BTB"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:acacia"
+      }
+    },
+    "R": {
+      "item": "minecraft:blaze_rod"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "P": {
+      "type": "neoforge:components",
+      "items": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": "minecraft:swiftness"
+      },
+    "strict": false
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:acacia",
+      "totemic:carving": "totemic:blaze"
+    }
+  }
+}
