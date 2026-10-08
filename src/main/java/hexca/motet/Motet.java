@@ -48,6 +48,7 @@ public class Motet {
     public Motet(IEventBus modEventBus, ModContainer modContainer) {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+        ModEffects.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(Motet::onBlockDrops);
         modEventBus.addListener(MotetTotems::register);
         modEventBus.addListener(Motet::addCreativeTabContents);
