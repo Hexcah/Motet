@@ -36,7 +36,7 @@ public class ModEffects {
 
     private static final class FlightMobEffect extends MobEffect {
         private FlightMobEffect() {
-            super(MobEffectCategory.BENEFICIAL, 0xFFD700);
+            super(MobEffectCategory.BENEFICIAL, 0xDDDDDD);
             addAttributeModifier(
                     NeoForgeMod.CREATIVE_FLIGHT,
                     FLIGHT_MODIFIER_ID,
