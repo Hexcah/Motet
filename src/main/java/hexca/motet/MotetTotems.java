@@ -20,8 +20,9 @@ public final class MotetTotems {
 
     public static void register(RegisterEvent event) {
         event.register(TOTEM_CARVING_REGISTRY, helper -> {
-            registerPotionTotem(helper, "turtle", MobEffects.MOVEMENT_SLOWDOWN, MobEffects.DAMAGE_RESISTANCE);
-            registerPotionTotem(helper, "ghast", ModEffects.FLIGHT_EFFECT);
+            registerPotionTotem(helper, "turtle", true,
+                    MobEffects.MOVEMENT_SLOWDOWN, MobEffects.DAMAGE_RESISTANCE);
+            registerPotionTotem(helper, "ghast", false, ModEffects.FLIGHT_EFFECT);
         });
     }
 
@@ -56,11 +57,12 @@ public final class MotetTotems {
 
     @SuppressWarnings({"rawtypes", "unchecked"})
     private static void registerPotionTotem(
-            RegisterEvent.RegisterHelper helper, String name, Holder<?>... effects) {
-        helper.register(ResourceLocation.fromNamespaceAndPath(Motet.MODID, name), createPotionCarving(effects));
+            RegisterEvent.RegisterHelper helper, String name, boolean scaleAmplifier, Holder<?>... effects) {
+        helper.register(ResourceLocation.fromNamespaceAndPath(Motet.MODID, name),
+                createPotionCarving(scaleAmplifier, effects));
     }
 
-    private static Object createPotionCarving(Holder<?>... effects) {
+    private static Object createPotionCarving(boolean scaleAmplifier, Holder<?>... effects) {
         try {
             Class<?> totemEffectClass = Class.forName("pokefenn.totemic.api.totem.TotemEffect");
             Class<?> potionEffectClass = Class.forName("pokefenn.totemic.api.totem.PotionTotemEffect");
@@ -68,7 +70,7 @@ public final class MotetTotems {
             for (Holder<?> effect : effects) {
                 potionEffects.add(potionEffectClass
                         .getConstructor(Holder.class, boolean.class)
-                        .newInstance(effect, true));
+                        .newInstance(effect, scaleAmplifier));
             }
             Class<?> carvingClass = Class.forName("pokefenn.totemic.api.totem.TotemCarving");
             return carvingClass.getMethod("of", List.class).invoke(null, potionEffects);
