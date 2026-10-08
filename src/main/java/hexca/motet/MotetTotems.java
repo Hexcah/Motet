@@ -1,12 +1,14 @@
 package hexca.motet;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
 public final class MotetTotems {
@@ -21,6 +23,35 @@ public final class MotetTotems {
             registerPotionTotem(helper, "turtle", MobEffects.ABSORPTION);
             registerPotionTotem(helper, "ghast", ModEffects.FLIGHT_EFFECT);
         });
+    }
+
+    public static void modifyCowTotem(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> modifyPotionTotem("cow", MobEffects.SATURATION));
+    }
+
+    private static void modifyPotionTotem(String name, Holder<?> effect) {
+        try {
+            Class<?> apiClass = Class.forName("pokefenn.totemic.api.TotemicAPI");
+            Object api = apiClass.getMethod("get").invoke(null);
+            Object registryApi = apiClass.getMethod("registry").invoke(api);
+            Object carvings = registryApi.getClass().getMethod("totemCarvings").invoke(registryApi);
+            ResourceLocation carvingId = ResourceLocation.fromNamespaceAndPath("totemic", name);
+            Object carving = Registry.class.getMethod("get", ResourceLocation.class).invoke(carvings, carvingId);
+            if (carving == null) {
+                throw new IllegalStateException("Totemic carving is unavailable: " + carvingId);
+            }
+
+            Class<?> potionEffectClass = Class.forName("pokefenn.totemic.api.totem.PotionTotemEffect");
+            Object potionEffect = potionEffectClass
+                    .getConstructor(Holder.class, boolean.class)
+                    .newInstance(effect, true);
+            Class<?> totemCarvingClass = Class.forName("pokefenn.totemic.api.totem.TotemCarving");
+            totemCarvingClass.getMethod("setEffects", List.class)
+                    .invoke(carving, List.of(potionEffect));
+        } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException
+                 | IllegalAccessException | InvocationTargetException exception) {
+            throw new IllegalStateException("Totemic's carving API is unavailable", exception);
+        }
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})

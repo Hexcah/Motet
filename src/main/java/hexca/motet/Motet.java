@@ -51,6 +51,7 @@ public class Motet {
         ModEffects.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(Motet::onBlockDrops);
         modEventBus.addListener(MotetTotems::register);
+        modEventBus.addListener(MotetTotems::modifyCowTotem);
         modEventBus.addListener(Motet::addCreativeTabContents);
         modContainer.registerConfig(ModConfig.Type.COMMON, MotetConfig.SPEC);
     }
