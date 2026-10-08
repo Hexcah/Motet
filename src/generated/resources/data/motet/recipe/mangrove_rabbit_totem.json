@@ -2,29 +2,29 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SLS",
-    "SPS",
-    "STS"
+    "HFH",
+    "HPH",
+    "HTH"
   ],
   "key": {
     "T": {
       "type": "neoforge:components",
       "items": "totemic:totem_pole",
       "components": {
-        "totemic:wood_type": "totemic:cherry"
+        "totemic:wood_type": "totemic:mangrove"
       }
     },
-    "S": {
-      "item": "minecraft:sugar"
+    "F": {
+      "item": "minecraft:rabbit_foot"
     },
-    "L": {
-      "item": "minecraft:leather_horse_armor"
+    "H": {
+      "item": "minecraft:rabbit_hide"
     },
     "P": {
       "type": "neoforge:components",
       "items": "minecraft:potion",
       "components": {
-        "minecraft:potion_contents": "minecraft:swiftness"
+        "minecraft:potion_contents": "minecraft:leaping"
       },
     "strict": false
     }
@@ -33,8 +33,8 @@
     "id": "totemic:totem_pole",
     "count": 1,
     "components": {
-      "totemic:wood_type": "totemic:cherry",
-      "totemic:carving": "totemic:horse"
+      "totemic:wood_type": "totemic:mangrove",
+      "totemic:carving": "totemic:rabbit"
     }
   }
 }

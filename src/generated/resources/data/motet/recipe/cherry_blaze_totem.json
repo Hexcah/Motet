@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SLS",
-    "SPS",
-    "STS"
+    "BRB",
+    "BPB",
+    "BTB"
   ],
   "key": {
     "T": {
@@ -14,11 +14,11 @@
         "totemic:wood_type": "totemic:cherry"
       }
     },
-    "S": {
-      "item": "minecraft:sugar"
+    "R": {
+      "item": "minecraft:blaze_rod"
     },
-    "L": {
-      "item": "minecraft:leather_horse_armor"
+    "B": {
+      "item": "minecraft:blaze_powder"
     },
     "P": {
       "type": "neoforge:components",
@@ -34,7 +34,7 @@
     "count": 1,
     "components": {
       "totemic:wood_type": "totemic:cherry",
-      "totemic:carving": "totemic:horse"
+      "totemic:carving": "totemic:blaze"
     }
   }
 }

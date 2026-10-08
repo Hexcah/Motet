@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SLS",
-    "SPS",
-    "STS"
+    "CGC",
+    "CGC",
+    "CTC"
   ],
   "key": {
     "T": {
@@ -14,19 +14,11 @@
         "totemic:wood_type": "totemic:cherry"
       }
     },
-    "S": {
-      "item": "minecraft:sugar"
+    "C": {
+      "item": "minecraft:cod"
     },
-    "L": {
-      "item": "minecraft:leather_horse_armor"
-    },
-    "P": {
-      "type": "neoforge:components",
-      "items": "minecraft:potion",
-      "components": {
-        "minecraft:potion_contents": "minecraft:swiftness"
-      },
-    "strict": false
+    "G": {
+      "item": "minecraft:gunpowder"
     }
   },
   "result": {
@@ -34,7 +26,7 @@
     "count": 1,
     "components": {
       "totemic:wood_type": "totemic:cherry",
-      "totemic:carving": "totemic:horse"
+      "totemic:carving": "totemic:ocelot"
     }
   }
 }

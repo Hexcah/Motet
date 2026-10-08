@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SLS",
-    "SPS",
-    "STS"
+    "GEG",
+    "GPG",
+    "GTG"
   ],
   "key": {
     "T": {
@@ -14,17 +14,17 @@
         "totemic:wood_type": "totemic:cherry"
       }
     },
-    "S": {
-      "item": "minecraft:sugar"
+    "G": {
+      "item": "minecraft:golden_carrot"
     },
-    "L": {
-      "item": "minecraft:leather_horse_armor"
+    "E": {
+      "item": "minecraft:ender_pearl"
     },
     "P": {
       "type": "neoforge:components",
       "items": "minecraft:potion",
       "components": {
-        "minecraft:potion_contents": "minecraft:swiftness"
+        "minecraft:potion_contents": "minecraft:night_vision"
       },
     "strict": false
     }
@@ -34,7 +34,7 @@
     "count": 1,
     "components": {
       "totemic:wood_type": "totemic:cherry",
-      "totemic:carving": "totemic:horse"
+      "totemic:carving": "totemic:enderman"
     }
   }
 }

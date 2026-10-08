@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SLS",
+    "SSS",
     "SPS",
     "STS"
   ],
@@ -15,16 +15,13 @@
       }
     },
     "S": {
-      "item": "minecraft:sugar"
-    },
-    "L": {
-      "item": "minecraft:leather_horse_armor"
+      "item": "minecraft:turtle_scute"
     },
     "P": {
       "type": "neoforge:components",
       "items": "minecraft:potion",
       "components": {
-        "minecraft:potion_contents": "minecraft:swiftness"
+        "minecraft:potion_contents": "minecraft:turtle_master"
       },
     "strict": false
     }
@@ -34,7 +31,7 @@
     "count": 1,
     "components": {
       "totemic:wood_type": "totemic:cherry",
-      "totemic:carving": "totemic:horse"
+      "totemic:carving": "motet:turtle"
     }
   }
 }
