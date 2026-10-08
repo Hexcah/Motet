@@ -80,13 +80,8 @@ neoForge {
     }
 }
 
-configurations {
-    runtimeClasspath.extendsFrom localRuntime
-}
-
 dependencies {
     compileOnly "mezz.jei:jei-1.21.1-neoforge-api:${jei_version}"
-    localRuntime "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
 }
 
 tasks.register("generateTotemBaseRecipes", JavaExec) {
