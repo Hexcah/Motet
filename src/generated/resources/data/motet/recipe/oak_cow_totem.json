@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MGM",
+    "MCM",
+    "MTM"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:oak"
+      }
+    },
+    "G": {
+      "item": "minecraft:golden_carrot"
+    },
+    "C": {
+      "item": "minecraft:cake"
+    },
+    "M": {
+      "tag": "c:foods/cooked_meat"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:oak",
+      "totemic:carving": "totemic:cow"
+    }
+  }
+}
