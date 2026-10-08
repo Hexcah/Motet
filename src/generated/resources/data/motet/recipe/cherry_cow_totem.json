@@ -3,7 +3,7 @@
   "category": "misc",
   "pattern": [
     "MGM",
-    "MCM",
+    "MAM",
     "MTM"
   ],
   "key": {
@@ -17,8 +17,8 @@
     "G": {
       "item": "minecraft:golden_carrot"
     },
-    "C": {
-      "item": "minecraft:cake"
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
     },
     "M": {
       "tag": "c:foods/cooked_meat"
