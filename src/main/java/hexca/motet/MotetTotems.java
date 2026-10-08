@@ -19,7 +19,7 @@ public final class MotetTotems {
     public static void register(RegisterEvent event) {
         event.register(TOTEM_CARVING_REGISTRY, helper -> {
             registerPotionTotem(helper, "turtle", MobEffects.ABSORPTION);
-            registerPotionTotem(helper, "ghast", MobEffects.REGENERATION);
+            registerPotionTotem(helper, "ghast", ModEffects.FLIGHT_EFFECT);
         });
     }
 
