@@ -43,7 +43,9 @@ public final class TotemBaseRecipeGenerator {
             }
 
             for (Path templatePath : templates) {
-                String template = Files.readString(templatePath);
+                String template = Files.readString(templatePath)
+                        .replace("\r\n", "\n")
+                        .replace('\r', '\n');
                 requireMarkers(template);
                 String recipeName = templatePath.getFileName().toString()
                         .replaceFirst("_recipe\\.template\\.json$", "");
