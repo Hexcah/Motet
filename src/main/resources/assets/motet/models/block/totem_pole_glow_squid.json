@@ -28,8 +28,8 @@
 			}
 		},
 		{
-			"from": [6, 7, 2],
-			"to": [12, 8, 3],
+			"from": [5, 7, 2],
+			"to": [13, 8, 3],
 			"rotation": {"angle": 0, "axis": "y", "origin": [-5, -8, 0]},
 			"faces": {
 				"north": {"texture": "#wood"},
