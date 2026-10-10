@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SES",
+    "SHS",
+    "STS"
+  ],
+  "key": {
+    "T": {
+      "type": "neoforge:components",
+      "items": "totemic:totem_pole",
+      "components": {
+        "totemic:wood_type": "totemic:spruce"
+      }
+    },
+    "S": {
+      "item": "minecraft:sculk"
+    },
+    "E": {
+      "item": "minecraft:sculk_sensor"
+    },
+    "H": {
+      "item": "minecraft:sculk_shrieker"
+    }
+  },
+  "result": {
+    "id": "totemic:totem_pole",
+    "count": 1,
+    "components": {
+      "totemic:wood_type": "totemic:spruce",
+      "totemic:carving": "motet:warden"
+    }
+  }
+}
