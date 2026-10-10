@@ -27,10 +27,10 @@ public final class MotetTotems {
     }
 
     public static void modifyCowTotem(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> modifyPotionTotem("cow", MobEffects.SATURATION));
+        event.enqueueWork(() -> modifyPotionTotem("cow", false, MobEffects.SATURATION));
     }
 
-    private static void modifyPotionTotem(String name, Holder<?> effect) {
+    private static void modifyPotionTotem(String name, boolean scaleAmplifier, Holder<?> effect) {
         try {
             Class<?> apiClass = Class.forName("pokefenn.totemic.api.TotemicAPI");
             Object api = apiClass.getMethod("get").invoke(null);
@@ -45,7 +45,7 @@ public final class MotetTotems {
             Class<?> potionEffectClass = Class.forName("pokefenn.totemic.api.totem.PotionTotemEffect");
             Object potionEffect = potionEffectClass
                     .getConstructor(Holder.class, boolean.class)
-                    .newInstance(effect, true);
+                    .newInstance(effect, scaleAmplifier);
             Class<?> totemCarvingClass = Class.forName("pokefenn.totemic.api.totem.TotemCarving");
             totemCarvingClass.getMethod("setEffects", List.class)
                     .invoke(carving, List.of(potionEffect));
