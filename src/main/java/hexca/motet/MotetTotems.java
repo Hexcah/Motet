@@ -23,6 +23,7 @@ public final class MotetTotems {
             registerPotionTotem(helper, "turtle", true, MobEffects.MOVEMENT_SLOWDOWN, MobEffects.DAMAGE_RESISTANCE);
             registerPotionTotem(helper, "ghast", false, ModEffects.FLIGHT_EFFECT);
             registerPotionTotem(helper, "glow_squid", false, MobEffects.GLOWING);
+            registerPotionTotem(helper, "warden", false, MobEffects.BLINDNESS);
         });
     }
 
