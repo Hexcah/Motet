@@ -3,5 +3,19 @@
   "block.motet.totem_upgrade_2": "Totem Upgrade 2",
   "effect.motet.flight": "Flight",
   "totemic.totem.motet.turtle": "Turtle",
-  "totemic.totem.motet.ghast": "Ghast"
+  "totemic.totem.motet.ghast": "Ghast",
+
+  "totemic.entry.totem_effects": "Totem Effects",
+  "totemic.page.totem_effects0": "$(thing)Totem Effects$() are passive effects that always emanate from a $(l:basics/totem_poles)Totem Pole$(). They depend on the patterns that you carved into it:$(br2)$(carving)Bat$(): Makes you fall slowly and negates fall damage$(br2)$(carving)Blaze$(): Protects you against fires",
+  "totemic.page.totem_effects1": "$(carving)Buffalo$(): Makes you mine blocks faster$(br2)$(carving)Cow$(): Gives you saturation$(br2)$(carving)Enderman$(): Gives you night vision$(br2)$(carving)Ghast$(): Gives you flight capabilities$(br2)$(carving)Horse$(): Gives you a speed boost$(br2)$(carving)Ocelot$(): Prevents Creepers from exploding$(br2)$(carving)Pig$(): Brings you good luck$(br2)$(carving)Rabbit$(): Gives you a jump boost",
+  "totemic.page.totem_effects2": "$(carving)Spider$(): Lets you climb walls like a Spider$(br2)$(carving)Squid$(): Gives you water breathing$(br2)$(carving)Turtle$(): Gives you damage resistance but also slows you down$(br2)$(carving)Wolf$(): Gives you attack strength",
+
+  "totemic.entry.totem_poles": "Totem Poles",
+  "totemic.page.totem_poles0": "$(thing)Totem Poles$() are the centerpieces of Totemic. They can be crafted from any type of log or stripped log. Different patterns can be carved, which will lead to different $(l:basics/totem_effects)Totem Effects$(/l).",
+  "totemic.page.totem_poles1": "Totem Poles need to have a $(thing)Totem Base$() at the bottom and can be up to 6 blocks high (including the base).$(br2)The same carving can be repeated multiple times on the same Totem Pole, making the effect stronger. A Totem Pole can also absorb $(l:basics/music)Melody$() which will make the effects stronger as well.",
+  "totemic.page.totem_poles2": "An example of how a Totem Pole can look like.",
+
+  "totemic.entry.totem_upgrades": "Totem Upgrades",
+  "totemic.page.totem_upgrades0": "$(item)Totem Upgrades$() are special blocks that can be placed beneath the $(thing)Totem Base$()) to increase its range the range of your $(l:basics/totem_poles)Totem$() $(br2)There are currently two different Totem Upgrades:",
+  "totemic.page.totem_upgrades1": "$(item)Totem Upgrade 1$(): Increases the range of your Totem Pole by 3 blocks$(br2)$(item)Totem Upgrade 2$(): Increases the range of your Totem Pole by 6 blocks"
 }
