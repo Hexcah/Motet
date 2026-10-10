@@ -16,6 +16,5 @@
   "totemic.page.totem_poles2": "An example of how a Totem Pole can look like.",
 
   "totemic.entry.totem_upgrades": "Totem Upgrades",
-  "totemic.page.totem_upgrades0": "$(item)Totem Upgrades$() are special blocks that can be placed beneath the $(thing)Totem Base$()) to increase its range the range of your $(l:basics/totem_poles)Totem$() $(br2)There are currently two different Totem Upgrades:",
-  "totemic.page.totem_upgrades1": "$(item)Totem Upgrade 1$(): Increases the range of your Totem Pole by 3 blocks$(br2)$(item)Totem Upgrade 2$(): Increases the range of your Totem Pole by 6 blocks"
+  "totemic.page.totem_upgrades0": "$(item)Totem Upgrades$() are special blocks that can be placed beneath the $(thing)Totem Base$()) to increase its range the range of your $(l:basics/totem_poles)Totem$() $(br2)$(item)Totem Upgrade 1$(): Increases the range of your Totem Pole by 3 blocks$(br2)$(item)Totem Upgrade 2$(): Increases the range of your Totem Pole by 6 blocks"
 }
