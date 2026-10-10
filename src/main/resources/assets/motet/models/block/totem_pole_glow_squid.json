@@ -7,7 +7,7 @@
 			"from": [3, 0, 3],
 			"to": [13, 16, 13],
 			"faces": {
-				"north": {"texture": "#wood", "tintindex": 6594432},
+				"north": {"texture": "#wood", "tintindex": 7065294},
 				"east": {"texture": "#wood"},
 				"south": {"texture": "#wood"},
 				"west": {"texture": "#wood"},
